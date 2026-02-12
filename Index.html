@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      padding: 24px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .photos img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 6px 0;
+    }
+    button {
+      background: #ff4d6d;
+      border: none;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hey Anu Mol 💖</h1>
+    <p>You make my world brighter every day ✨</p>
+
+    <div class="photos">
+      <img src="IMG_20210911_083200_Original.jpg" />
+    </div>
+
+    <button onclick="showPopup()">Open Surprise 🎁</button>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  ">
+    <div style="
+      background: white;
+      color: #ff4d6d;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      width: 85%;
+      max-width: 340px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    ">
+      <h2>Will you be my Valentine? 💘</h2>
+      <p>You mean everything to me ❤️</p>
+      <button onclick="yesClicked()">Yes 💖</button>
+      <button onclick="noClicked()" style="background:#eee;color:#333;">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    function yesClicked() {
+      alert("Yayyy! You just made my day ❤️😘");
+      document.getElementById("popup").style.display = "none";
+    }
+    function noClicked() {
+      alert("Haha okay, I’ll ask you again tomorrow 😜❤️");
+    }
+  </script>
+
+</body>
+</html>
+
